@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  FUJINANO DESIGN TOKENS
+  ----------------------
+  [CẦN XÁC NHẬN MÀU THƯƠNG HIỆU CHÍNH THỨC] — bảng màu dưới đây là đề xuất
+  cho ngành sơn & chống thấm (navy tin cậy + accent cam cho CTA). Khi Fujinano
+  cung cấp brand guideline chính thức, chỉ cần đổi các biến trong :root này,
+  toàn bộ hệ thống sẽ tự cập nhật.
+*/
+:root {
+  /* Brand */
+  --brand: 214 74% 22%;          /* #0f2f5e navy — trust, headers, footer */
+  --brand-fg: 0 0% 100%;
+  --brand-soft: 214 60% 96%;     /* nền nhạt cho section thương hiệu */
+
+  /* Accent (CTA) */
+  --accent: 18 89% 54%;          /* #f26522 cam — nút hành động chính */
+  --accent-fg: 0 0% 100%;
+  --accent-hover: 18 89% 47%;
+
+  /* Support (nước / kỹ thuật) */
+  --support: 208 79% 51%;        /* #1e88e5 xanh nước */
+
+  /* Surfaces */
+  --surface: 0 0% 100%;
+  --surface-alt: 210 33% 97%;    /* nền section xen kẽ */
+  --surface-sunken: 214 30% 94%;
+
+  /* Text */
+  --text: 216 33% 17%;           /* #1c2733 */
+  --muted: 215 16% 42%;          /* phụ đề, meta */
+  --border: 214 20% 88%;
+
+  /* Semantic */
+  --success: 152 56% 36%;
+  --warning: 38 92% 50%;
+  --danger: 0 72% 51%;
+
+  /* Radius (mục 28) */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+
+  /* Elevation — giữ chrome phẳng, chỉ nâng cho object mua được */
+  --shadow-flat: 0 1px 2px 0 rgb(15 47 94 / 0.06);
+  --shadow-card: 0 6px 24px -8px rgb(15 47 94 / 0.18);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Font hệ thống (an toàn offline). Khi load webfont thương hiệu,
+     đổi giá trị này là toàn site cập nhật. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+body {
+  background: hsl(var(--surface));
+  color: hsl(var(--text));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Body tối thiểu 16px (mục 14) */
+p, li, label, input, textarea, select {
+  font-size: 16px;
+}
+
+/* Tap target tối thiểu 44px + focus rõ (mục 14, 27) */
+a, button, [role="button"], input, textarea, select {
+  outline-color: hsl(var(--accent));
+}
+:focus-visible {
+  outline: 3px solid hsl(var(--accent) / 0.55);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .fjn-input {
+    @apply w-full rounded border border-border bg-surface px-4 py-3 text-base text-text
+      placeholder:text-muted/60 focus:border-support focus:outline-none
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-support/50;
+    min-height: 48px;
+  }
+  .fjn-btn-primary {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded bg-accent px-6
+      py-3 text-base font-semibold text-accent-fg transition-colors hover:bg-accent-hover;
+  }
+  .fjn-btn-ghost {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded border border-border
+      bg-surface px-6 py-3 text-base font-semibold text-text transition-colors hover:border-brand;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

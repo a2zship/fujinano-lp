@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# env
+.env
+.env.local
+.env*.local
+
+# leads (dữ liệu thu thập ở dev)
+/data
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+next-env.d.ts
