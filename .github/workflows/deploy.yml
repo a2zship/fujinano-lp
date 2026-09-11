@@ -31,6 +31,11 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Enable GitHub Pages (source = Actions)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Install
         run: npm ci
 
