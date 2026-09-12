@@ -16,6 +16,7 @@ export const nanoCeramicConfig: LandingPageConfig = {
     description:
       'Lớp phủ Nano Ceramic Fujinano (FJ-368C) cho nhu cầu bảo vệ và hoàn thiện bề mặt. Kỹ thuật tư vấn phạm vi ứng dụng phù hợp. Nhận tư vấn kỹ thuật miễn phí.',
     canonical: '/giai-phap/nano-ceramic',
+    ogImage: '/images/og/og-nano-ceramic.jpg',
   },
 
   breadcrumb: [

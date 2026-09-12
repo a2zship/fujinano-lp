@@ -16,6 +16,7 @@ export const chongThamConfig: LandingPageConfig = {
     description:
       'Xử lý thấm sân thượng, tường ngoài, nhà vệ sinh và khu vực tiếp xúc nước. Kỹ thuật Fujinano khảo sát nguyên nhân và đề xuất hệ sản phẩm phù hợp. Nhận tư vấn kỹ thuật miễn phí.',
     canonical: '/giai-phap/chong-tham',
+    ogImage: '/images/og/og-chong-tham.jpg',
   },
 
   breadcrumb: [

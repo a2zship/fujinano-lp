@@ -13,6 +13,7 @@ export const sonSanConfig: LandingPageConfig = {
     description:
       'Sơn phủ sàn bê tông cho nhà xưởng, kho, tầng hầm và showroom. Kỹ thuật Fujinano đánh giá mặt sàn và đề xuất hệ sơn PU phù hợp. Nhận tư vấn kỹ thuật miễn phí.',
     canonical: '/giai-phap/son-san',
+    ogImage: '/images/og/og-son-san.jpg',
   },
 
   breadcrumb: [

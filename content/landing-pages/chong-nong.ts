@@ -14,6 +14,7 @@ export const chongNongConfig: LandingPageConfig = {
     description:
       'Giảm hấp nhiệt cho mái tôn, mái bê tông và tường hướng nắng. Kỹ thuật Fujinano khảo sát bề mặt và đề xuất hệ sản phẩm phù hợp. Nhận tư vấn kỹ thuật miễn phí.',
     canonical: '/giai-phap/chong-nong',
+    ogImage: '/images/og/og-chong-nong.jpg',
   },
 
   breadcrumb: [
