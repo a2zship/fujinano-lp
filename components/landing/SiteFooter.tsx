@@ -29,6 +29,11 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/dai-ly" className="font-semibold text-brand-fg hover:text-accent">
+                  Trở thành đại lý
+                </Link>
+              </li>
             </ul>
           </nav>
 

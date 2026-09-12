@@ -66,6 +66,21 @@ export default function Home() {
               );
             })}
           </div>
+
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-lg bg-brand p-6 text-brand-fg sm:flex-row">
+            <div>
+              <h2 className="text-xl font-semibold">Bạn muốn kinh doanh sản phẩm Fujinano?</h2>
+              <p className="mt-1 text-sm text-brand-fg/80">
+                Chính sách chiết khấu theo nhóm, hỗ trợ marketing và đào tạo kỹ thuật cho đối tác.
+              </p>
+            </div>
+            <Link
+              href="/dai-ly"
+              className="inline-flex min-h-[48px] flex-none items-center justify-center rounded bg-accent px-6 py-3 font-semibold text-accent-fg transition-colors hover:bg-accent-hover"
+            >
+              Trở thành đại lý
+            </Link>
+          </div>
         </Container>
       </section>
 

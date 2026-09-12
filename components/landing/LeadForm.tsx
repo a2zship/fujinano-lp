@@ -181,7 +181,7 @@ export function LeadForm({ config }: { config: LandingPageConfig }) {
 
                 {step === 2 && (
                   <>
-                    <Field label="Loại công trình">
+                    <Field label={form.projectTypeLabel ?? 'Loại công trình'}>
                       <select
                         className="fjn-input"
                         value={data.projectType ?? ''}
@@ -196,28 +196,33 @@ export function LeadForm({ config }: { config: LandingPageConfig }) {
                       </select>
                     </Field>
 
-                    <Field label="Diện tích ước tính (m²)">
-                      <input
-                        type="number"
-                        inputMode="numeric"
-                        min={0}
-                        className="fjn-input"
-                        value={data.estimatedArea ?? ''}
-                        onChange={(e) =>
-                          update({
-                            estimatedArea: e.target.value
-                              ? Number(e.target.value)
-                              : undefined,
-                          })
-                        }
-                      />
-                    </Field>
+                    {form.showArea !== false && (
+                      <Field label={form.areaLabel ?? 'Diện tích ước tính (m²)'}>
+                        <input
+                          type="number"
+                          inputMode="numeric"
+                          min={0}
+                          className="fjn-input"
+                          value={data.estimatedArea ?? ''}
+                          onChange={(e) =>
+                            update({
+                              estimatedArea: e.target.value
+                                ? Number(e.target.value)
+                                : undefined,
+                            })
+                          }
+                        />
+                      </Field>
+                    )}
 
-                    <Field label="Mô tả tình trạng công trình">
+                    <Field label={form.descriptionLabel ?? 'Mô tả tình trạng công trình'}>
                       <textarea
                         rows={3}
                         className="fjn-input"
-                        placeholder="VD: sân thượng 40m² bị thấm xuống trần, đã xử lý 1 lần."
+                        placeholder={
+                          form.descriptionPlaceholder ??
+                          'VD: sân thượng 40m² bị thấm xuống trần, đã xử lý 1 lần.'
+                        }
                         value={data.description ?? ''}
                         onChange={(e) => update({ description: e.target.value })}
                       />

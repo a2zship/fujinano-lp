@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { getLandingPage, getAllLandingSlugs } from '@/content/landing-pages';
+import { daiLyConfig } from '@/content/landing-pages/dai-ly';
 
 /*
   Kiểm tra dynamic page rendering ở mức dữ liệu (mục 29):
@@ -62,5 +63,21 @@ describe('landing registry', () => {
       const raw = JSON.stringify(getLandingPage(slug)).toLowerCase();
       for (const b of banned) expect(raw, `${slug} chứa "${b}"`).not.toContain(b);
     }
+  });
+});
+
+describe('trang đại lý (/dai-ly)', () => {
+  it('cấu hình đúng loại lead & form đối tác', () => {
+    expect(daiLyConfig.slug).toBe('dai-ly');
+    expect(daiLyConfig.form.leadType).toBe('dealer');
+    expect(daiLyConfig.form.showArea).toBe(false); // ẩn ô diện tích công trình
+    expect(daiLyConfig.policy).toBeDefined();
+    expect(daiLyConfig.finalCta.primaryCTA).toBeTruthy();
+    expect(daiLyConfig.products?.items.length).toBeGreaterThan(0);
+  });
+
+  it('KHÔNG hard-code % chiết khấu trong config (lấy từ brand.ts)', () => {
+    const raw = JSON.stringify(daiLyConfig);
+    expect(raw).not.toMatch(/20\s*%|30\s*%/);
   });
 });

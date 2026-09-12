@@ -193,6 +193,13 @@ export interface LandingPageConfig {
     items: FAQItem[];
   };
 
+  /** Section chính sách (trang đại lý). Số liệu lấy từ content/brand.ts (mục 22). */
+  policy?: {
+    title: string;
+    description?: string;
+    showPromotion?: boolean;
+  };
+
   finalCta: {
     title: string;
     description?: string;
@@ -205,5 +212,11 @@ export interface LandingPageConfig {
     leadType: CustomerType | string;
     needOptions?: string[];
     projectTypeOptions?: string[];
+    /** Tuỳ biến nhãn bước 2 (mặc định theo công trình xây dựng). */
+    projectTypeLabel?: string;
+    areaLabel?: string;
+    showArea?: boolean; // false -> ẩn ô diện tích (vd trang đại lý)
+    descriptionLabel?: string;
+    descriptionPlaceholder?: string;
   };
 }

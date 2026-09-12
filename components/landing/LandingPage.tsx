@@ -7,6 +7,7 @@ import { Solution } from './Solution';
 import { Benefits } from './Benefits';
 import { Evidence } from './Evidence';
 import { ProductCards } from './ProductCards';
+import { DealerPolicy } from './DealerPolicy';
 import { Process } from './Process';
 import { CaseStudies } from './CaseStudies';
 import { FAQ } from './FAQ';
@@ -36,6 +37,7 @@ export function LandingPage({ config }: { config: LandingPageConfig }) {
       <Benefits config={config} />
       <Evidence config={config} />
       <ProductCards config={config} />
+      <DealerPolicy config={config} />
       <Process config={config} />
       <CaseStudies config={config} />
       <FAQ config={config} />
