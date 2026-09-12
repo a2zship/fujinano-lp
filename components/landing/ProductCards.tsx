@@ -1,6 +1,7 @@
 import { type LandingPageConfig } from '@/types';
 import { Section, SectionHeading } from '@/components/ui/Section';
 import { CtaButton } from '@/components/ui/CtaButton';
+import { asset } from '@/lib/asset';
 
 export function ProductCards({ config }: { config: LandingPageConfig }) {
   const products = config.products;
@@ -19,7 +20,7 @@ export function ProductCards({ config }: { config: LandingPageConfig }) {
             <div className="flex aspect-[4/3] items-center justify-center border-b border-border bg-white p-3 text-center text-xs text-muted/70">
               {p.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={p.image} alt={p.name} className="h-full w-full object-contain" loading="lazy" />
+                <img src={asset(p.image)} alt={p.name} className="h-full w-full object-contain" loading="lazy" />
               ) : (
                 <span className="px-4">[CẦN BỔ SUNG HÌNH BAO BÌ THẬT]</span>
               )}

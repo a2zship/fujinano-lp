@@ -3,6 +3,7 @@ import { Container } from '@/components/ui/Container';
 import { CtaButton } from '@/components/ui/CtaButton';
 import { Logo } from '@/components/ui/Logo';
 import { brandPillars } from '@/content/brand';
+import { asset } from '@/lib/asset';
 
 export function Hero({ config }: { config: LandingPageConfig }) {
   const { hero } = config;
@@ -59,7 +60,7 @@ export function Hero({ config }: { config: LandingPageConfig }) {
             {hero.image ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={hero.image}
+                src={asset(hero.image)}
                 alt={hero.imageAlt ?? config.hero.headline}
                 className="w-full rounded-lg shadow-card"
                 loading="eager"

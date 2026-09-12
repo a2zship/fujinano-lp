@@ -1,5 +1,6 @@
 import { type LandingPageConfig } from '@/types';
 import { Section, SectionHeading } from '@/components/ui/Section';
+import { asset } from '@/lib/asset';
 
 /*
   EVIDENCE (mục 8.5) — section quan trọng nhất.
@@ -24,7 +25,7 @@ export function Evidence({ config }: { config: LandingPageConfig }) {
               <figure key={i} className="overflow-hidden rounded-lg bg-surface shadow-flat">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={b.image}
+                  src={asset(b.image)}
                   alt={b.imageAlt ?? b.title ?? 'Công trình Fujinano'}
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
