@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getLandingPage, getAllLandingSlugs } from '@/content/landing-pages';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { brand } from '@/content/brand';
+import { brand, OG_IMAGE } from '@/content/brand';
 
 type Params = { slug: string };
 
@@ -33,12 +33,13 @@ export function generateMetadata({
       siteName: brand.name,
       locale: 'vi_VN',
       type: 'website',
-      ...(config.seo.ogImage ? { images: [{ url: config.seo.ogImage }] } : {}),
+      images: [{ url: config.seo.ogImage ?? OG_IMAGE }],
     },
     twitter: {
       card: 'summary_large_image',
       title: config.seo.title,
       description: config.seo.description,
+      images: [config.seo.ogImage ?? OG_IMAGE],
     },
   };
 }

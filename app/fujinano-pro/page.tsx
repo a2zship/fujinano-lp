@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { fujinanoProConfig } from '@/content/landing-pages/fujinano-pro';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { brand } from '@/content/brand';
+import { brand, OG_IMAGE } from '@/content/brand';
 
 const canonical = fujinanoProConfig.seo.canonical ?? '/fujinano-pro';
 
@@ -19,9 +19,11 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: 'vi_VN',
     type: 'website',
+    images: [{ url: OG_IMAGE }],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [OG_IMAGE],
     title: fujinanoProConfig.seo.title,
     description: fujinanoProConfig.seo.description,
   },

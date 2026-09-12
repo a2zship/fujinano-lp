@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { MarketingScripts } from '@/components/analytics/MarketingScripts';
-import { brand } from '@/content/brand';
+import { brand, OG_IMAGE } from '@/content/brand';
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.siteUrl),
@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description:
     'Fujinano — sơn và giải pháp chống thấm. Nhận tư vấn kỹ thuật và báo giá theo công trình thực tế.',
   robots: { index: true, follow: true },
+  openGraph: {
+    siteName: brand.name,
+    locale: 'vi_VN',
+    type: 'website',
+    images: [{ url: OG_IMAGE, width: 1200, height: 675 }],
+  },
+  twitter: { card: 'summary_large_image', images: [OG_IMAGE] },
 };
 
 export const viewport = {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { doanhNghiepConfig } from '@/content/landing-pages/giai-phap-doanh-nghiep';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { brand } from '@/content/brand';
+import { brand, OG_IMAGE } from '@/content/brand';
 
 const canonical = doanhNghiepConfig.seo.canonical ?? '/giai-phap-doanh-nghiep';
 
@@ -19,9 +19,11 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: 'vi_VN',
     type: 'website',
+    images: [{ url: OG_IMAGE }],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [OG_IMAGE],
     title: doanhNghiepConfig.seo.title,
     description: doanhNghiepConfig.seo.description,
   },

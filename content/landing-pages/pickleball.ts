@@ -27,7 +27,8 @@ export const pickleballConfig: LandingPageConfig = {
     headline: 'Giải pháp sơn phủ mặt sân Pickleball cho sân mới và sân cải tạo',
     subheadline:
       'Dành cho chủ sân, nhà đầu tư và nhà thầu thi công. Kỹ thuật Fujinano khảo sát mặt nền trước khi đề xuất hệ sơn và cách thi công.',
-    imageAlt: 'Thi công sơn mặt sân Pickleball bằng sản phẩm Fujinano',
+    image: '/images/cong-trinh/pickleball-poster.webp',
+    imageAlt: 'Giải pháp sơn sân Pickleball Fujinano — dòng PU-888 PICK',
     primaryCTA: 'Nhận tư vấn kỹ thuật',
     secondaryCTA: 'Nhận báo giá',
     trustNote: 'Kỹ thuật liên hệ tư vấn theo hiện trạng mặt nền của anh/chị.',

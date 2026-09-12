@@ -26,6 +26,9 @@ export const brand = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3151',
 };
 
+/** Ảnh chia sẻ mạng xã hội mặc định (OG). Next tự tuyệt đối hoá theo metadataBase. */
+export const OG_IMAGE = '/images/og/fujinano-og.jpg';
+
 /** 4 trụ giá trị Fujinano (theo vật liệu thương hiệu chính thức). */
 export const brandPillars = [
   { title: 'Công nghệ Nhật Bản', desc: '日本の技術 — tiêu chuẩn kỹ thuật Nhật Bản.' },

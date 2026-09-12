@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { daiLyConfig } from '@/content/landing-pages/dai-ly';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { brand } from '@/content/brand';
+import { brand, OG_IMAGE } from '@/content/brand';
 
 const canonical = daiLyConfig.seo.canonical ?? '/dai-ly';
 
@@ -19,9 +19,11 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: 'vi_VN',
     type: 'website',
+    images: [{ url: OG_IMAGE }],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [OG_IMAGE],
     title: daiLyConfig.seo.title,
     description: daiLyConfig.seo.description,
   },
