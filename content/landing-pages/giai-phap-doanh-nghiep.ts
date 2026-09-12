@@ -15,6 +15,7 @@ export const doanhNghiepConfig: LandingPageConfig = {
     description:
       'Fujinano cung cấp giải pháp vật liệu sơn, chống thấm, sơn sàn cho nhà thầu, chủ đầu tư, xưởng và kiến trúc sư: tư vấn kỹ thuật, mẫu thử và báo giá theo dự án.',
     canonical: '/giai-phap-doanh-nghiep',
+    ogImage: '/images/og/og-doanh-nghiep.jpg',
   },
 
   breadcrumb: [

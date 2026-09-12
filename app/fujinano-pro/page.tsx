@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: 'vi_VN',
     type: 'website',
-    images: [{ url: OG_IMAGE }],
+    images: [{ url: fujinanoProConfig.seo.ogImage ?? OG_IMAGE }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [OG_IMAGE],
+    images: [fujinanoProConfig.seo.ogImage ?? OG_IMAGE],
     title: fujinanoProConfig.seo.title,
     description: fujinanoProConfig.seo.description,
   },

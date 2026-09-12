@@ -15,6 +15,7 @@ export const daiLyConfig: LandingPageConfig = {
     description:
       'Cơ hội phân phối sơn & chống thấm Fujinano: chính sách chiết khấu theo nhóm, hỗ trợ marketing, đào tạo kỹ thuật và tư vấn khu vực. Đăng ký làm đại lý.',
     canonical: '/dai-ly',
+    ogImage: '/images/og/og-dai-ly.jpg',
   },
 
   breadcrumb: [

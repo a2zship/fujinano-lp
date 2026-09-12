@@ -13,6 +13,7 @@ export const fujinanoProConfig: LandingPageConfig = {
     description:
       'Tham gia Fujinano Pro: nhận công trình, hỗ trợ kỹ thuật và đào tạo sản phẩm cho thợ và đội thi công sơn, chống thấm, sơn sàn. Đăng ký Fujinano Pro.',
     canonical: '/fujinano-pro',
+    ogImage: '/images/og/og-fujinano-pro.jpg',
   },
 
   breadcrumb: [

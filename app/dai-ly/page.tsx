@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: 'vi_VN',
     type: 'website',
-    images: [{ url: OG_IMAGE }],
+    images: [{ url: daiLyConfig.seo.ogImage ?? OG_IMAGE }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [OG_IMAGE],
+    images: [daiLyConfig.seo.ogImage ?? OG_IMAGE],
     title: daiLyConfig.seo.title,
     description: daiLyConfig.seo.description,
   },
