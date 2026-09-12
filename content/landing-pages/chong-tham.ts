@@ -29,7 +29,8 @@ export const chongThamConfig: LandingPageConfig = {
     headline: 'Xử lý dứt điểm thấm sân thượng, tường ngoài và khu vực tiếp xúc nước',
     subheadline:
       'Dành cho nhà ở, công trình đã thấm hoặc cần chống thấm mới. Kỹ thuật Fujinano khảo sát nguyên nhân trước khi chọn hệ sản phẩm — không xử lý theo kiểu chắp vá.',
-    imageAlt: 'Thi công chống thấm sân thượng bằng sản phẩm Fujinano',
+    image: '/images/cong-trinh/villa.webp',
+    imageAlt: 'Ngôi nhà được bảo vệ bằng giải pháp sơn & chống thấm Fujinano',
     primaryCTA: 'Nhận tư vấn kỹ thuật',
     secondaryCTA: 'Nhận báo giá',
     trustNote:

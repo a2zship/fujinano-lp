@@ -2,6 +2,7 @@ import { type LandingPageConfig } from '@/types';
 import { Container } from '@/components/ui/Container';
 import { CtaButton } from '@/components/ui/CtaButton';
 import { Logo } from '@/components/ui/Logo';
+import { brandPillars } from '@/content/brand';
 
 export function Hero({ config }: { config: LandingPageConfig }) {
   const { hero } = config;
@@ -64,8 +65,19 @@ export function Hero({ config }: { config: LandingPageConfig }) {
                 loading="eager"
               />
             ) : (
-              <div className="flex aspect-[1.3/1] w-full items-center justify-center rounded-lg border border-white/20 bg-white/5 p-6 text-center text-sm text-brand-fg/60">
-                [CẦN BỔ SUNG HÌNH ẢNH THỰC TẾ CÔNG TRÌNH FUJINANO]
+              // Không có ảnh -> panel trụ giá trị thương hiệu (không để placeholder trống).
+              <div className="rounded-lg border border-white/15 bg-white/5 p-6">
+                <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-gold">
+                  Vì sao chọn Fujinano
+                </p>
+                <ul className="grid grid-cols-2 gap-4">
+                  {brandPillars.map((p) => (
+                    <li key={p.title}>
+                      <p className="font-semibold text-brand-fg">{p.title}</p>
+                      <p className="mt-0.5 text-sm text-brand-fg/70">{p.desc}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>

@@ -27,7 +27,8 @@ export const doanhNghiepConfig: LandingPageConfig = {
     headline: 'Giải pháp vật liệu sơn & chống thấm cho nhà thầu và chủ đầu tư',
     subheadline:
       'Dành cho nhà thầu, công ty xây dựng, chủ đầu tư, xưởng và kiến trúc sư. Tư vấn kỹ thuật theo hồ sơ, hỗ trợ mẫu thử và báo giá theo khối lượng dự án.',
-    imageAlt: 'Tư vấn giải pháp vật liệu Fujinano cho dự án doanh nghiệp',
+    image: '/images/cong-trinh/kim-loai.webp',
+    imageAlt: 'Kết cấu thép công trình sơn hệ Fujinano cho dự án doanh nghiệp',
     primaryCTA: 'Nhận giải pháp kỹ thuật',
     secondaryCTA: 'Nhận báo giá dự án',
     trustNote: 'Bộ phận dự án sẽ liên hệ tư vấn theo yêu cầu kỹ thuật của công trình.',

@@ -230,6 +230,30 @@ export const products: Record<string, ProductCard> = {
   },
 };
 
+/* Ảnh bao bì thật (cắt từ bảng giá chính thức) — gán tập trung theo mã. */
+const PRODUCT_IMAGES: Record<string, string> = {
+  'CT-502': 'ct502-chong-tham.webp',
+  'PU-380': 'pu380-tuong.webp',
+  'PU-700': 'pu700.webp',
+  'PU-180': 'pu180.webp',
+  'FJ-118M': 'fj118m.webp',
+  'PU-600': 'pu600-chong-nong.webp',
+  'FJ-D22': 'fjd22.webp',
+  'FJ-D26': 'fjd26.webp',
+  'FJ-D28': 'fjd28.webp',
+  'FJ-108N': 'fj108n.webp',
+  'FJ-168': 'fj168.webp',
+  'PU-680': 'pu680-ngoai-that.webp',
+  'EP-2K CG': 'ep2k-cg.webp',
+  'PU-2K KL': 'pu2k-kl.webp',
+  'PU-2K SNX': 'pu2k-snx.webp',
+  'FJ-368C': 'nano-ceramic.webp',
+  // 'PU-888 PICK': chưa có ảnh -> giữ placeholder.
+};
+for (const [code, file] of Object.entries(PRODUCT_IMAGES)) {
+  if (products[code]) products[code].image = `${IMG}/${file}`;
+}
+
 /** Lấy nhiều sản phẩm theo mã, bỏ qua mã không tồn tại. */
 export function getProducts(codes: string[]): ProductCard[] {
   return codes.map((c) => products[c]).filter(Boolean);
