@@ -35,7 +35,41 @@ export const products: Record<string, ProductCard> = {
   'FJ-368C': {
     name: 'Fujinano FJ-368C Nano Ceramic',
     code: 'FJ-368C',
-    usage: 'Dòng Nano Ceramic.',
+    usage: 'Dòng phủ Nano Ceramic.',
+    surfaces: ['[CẦN XÁC NHẬN THÔNG SỐ]'],
+    packaging: '[CẦN XÁC NHẬN QUY CÁCH]',
+    cta: 'Nhận tư vấn kỹ thuật',
+  },
+  // Dòng PU cho sàn / kim loại (CLAUDE.md mục 1). Usage nêu nhóm, KHÔNG claim
+  // hiệu năng; thông số/quy cách để placeholder tới khi có TDS.
+  'PU-600': {
+    name: 'Fujinano PU-600',
+    code: 'PU-600',
+    usage: 'Dòng sơn PU cho sàn / kim loại.',
+    surfaces: ['[CẦN XÁC NHẬN THÔNG SỐ]'],
+    packaging: '[CẦN XÁC NHẬN QUY CÁCH]',
+    cta: 'Nhận tư vấn kỹ thuật',
+  },
+  'PU-700': {
+    name: 'Fujinano PU-700',
+    code: 'PU-700',
+    usage: 'Dòng sơn PU cho sàn / kim loại.',
+    surfaces: ['[CẦN XÁC NHẬN THÔNG SỐ]'],
+    packaging: '[CẦN XÁC NHẬN QUY CÁCH]',
+    cta: 'Nhận tư vấn kỹ thuật',
+  },
+  'PU-380': {
+    name: 'Fujinano PU-380',
+    code: 'PU-380',
+    usage: 'Dòng sơn PU cho sàn / kim loại.',
+    surfaces: ['[CẦN XÁC NHẬN THÔNG SỐ]'],
+    packaging: '[CẦN XÁC NHẬN QUY CÁCH]',
+    cta: 'Nhận tư vấn kỹ thuật',
+  },
+  'PU-888 PICK': {
+    name: 'Fujinano PU-888 PICK',
+    code: 'PU-888 PICK',
+    usage: 'Dòng sơn cho sân Pickleball.',
     surfaces: ['[CẦN XÁC NHẬN THÔNG SỐ]'],
     packaging: '[CẦN XÁC NHẬN QUY CÁCH]',
     cta: 'Nhận tư vấn kỹ thuật',

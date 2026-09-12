@@ -1,16 +1,37 @@
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { brand } from '@/content/brand';
+import { landingPages } from '@/content/landing-pages';
 
 export function SiteFooter() {
   const hasHotline = !brand.hotline.startsWith('[');
+  const solutions = Object.values(landingPages);
   return (
     <footer className="bg-brand text-brand-fg/80">
       <Container className="py-10">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+        <div className="flex flex-col justify-between gap-6 md:flex-row">
           <div>
             <p className="text-lg font-bold text-brand-fg">{brand.name}</p>
             <p className="text-sm">{brand.tagline}</p>
           </div>
+
+          <nav aria-label="Giải pháp" className="text-sm">
+            <p className="mb-2 font-semibold text-brand-fg">Giải pháp</p>
+            <ul className="space-y-1">
+              {solutions.map((cfg) => (
+                <li key={cfg.slug}>
+                  <Link
+                    href={`/giai-phap/${cfg.slug}`}
+                    className="hover:text-accent"
+                  >
+                    {cfg.breadcrumb?.[cfg.breadcrumb.length - 1]?.label ??
+                      cfg.slug}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="text-sm">
             <p>
               Hotline:{' '}

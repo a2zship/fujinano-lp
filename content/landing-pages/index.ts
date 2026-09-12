@@ -1,5 +1,9 @@
 import type { LandingPageConfig } from '@/types';
 import { chongThamConfig } from './chong-tham';
+import { chongNongConfig } from './chong-nong';
+import { nanoCeramicConfig } from './nano-ceramic';
+import { sonSanConfig } from './son-san';
+import { pickleballConfig } from './pickleball';
 
 /*
   REGISTRY landing page (mục 4, 7).
@@ -7,10 +11,10 @@ import { chongThamConfig } from './chong-tham';
 */
 export const landingPages: Record<string, LandingPageConfig> = {
   'chong-tham': chongThamConfig,
-  // 'chong-nong': chongNongConfig,   <- nhân bản sau khi template được duyệt
-  // 'nano-ceramic': nanoCeramicConfig,
-  // 'son-san': sonSanConfig,
-  // 'pickleball': pickleballConfig,
+  'chong-nong': chongNongConfig,
+  'nano-ceramic': nanoCeramicConfig,
+  'son-san': sonSanConfig,
+  'pickleball': pickleballConfig,
 };
 
 export function getLandingPage(slug: string): LandingPageConfig | undefined {

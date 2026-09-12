@@ -28,9 +28,39 @@ describe('landing registry', () => {
     expect(cfg.seo.description.length).toBeGreaterThan(30);
   });
 
-  it('không chứa claim cấm (số 1, 100% chống thấm, giảm X độ...)', () => {
-    const raw = JSON.stringify(getLandingPage('chong-tham')).toLowerCase();
-    const banned = ['số 1', 'tốt nhất thị trường', '100% chống thấm', 'bền vĩnh viễn'];
-    for (const b of banned) expect(raw).not.toContain(b);
+  it('có đủ 5 trang giải pháp đã đăng ký', () => {
+    for (const slug of ['chong-tham', 'chong-nong', 'nano-ceramic', 'son-san', 'pickleball']) {
+      expect(getAllLandingSlugs()).toContain(slug);
+    }
+  });
+
+  it('MỌI trang đều đủ khối tối thiểu để render', () => {
+    for (const slug of getAllLandingSlugs()) {
+      const cfg = getLandingPage(slug)!;
+      expect(cfg.slug, slug).toBe(slug);
+      expect(cfg.hero.headline.length, slug).toBeGreaterThan(10);
+      expect(cfg.hero.primaryCTA, slug).toBeTruthy();
+      expect(cfg.painPoints.items.length, slug).toBeGreaterThanOrEqual(3);
+      expect(cfg.solution.steps.length, slug).toBeGreaterThan(0);
+      expect(cfg.finalCta.primaryCTA, slug).toBeTruthy();
+      expect(cfg.form.needOptions?.length, slug).toBeGreaterThan(0);
+      expect(cfg.seo.title, slug).toBeTruthy();
+      expect(cfg.seo.description.length, slug).toBeGreaterThan(30);
+    }
+  });
+
+  it('KHÔNG trang nào chứa claim cấm (số 1, 100% chống thấm, giảm X độ...)', () => {
+    const banned = [
+      'số 1',
+      'tốt nhất thị trường',
+      '100% chống thấm',
+      'bền vĩnh viễn',
+      'độc quyền',
+      'giảm nhiệt',
+    ];
+    for (const slug of getAllLandingSlugs()) {
+      const raw = JSON.stringify(getLandingPage(slug)).toLowerCase();
+      for (const b of banned) expect(raw, `${slug} chứa "${b}"`).not.toContain(b);
+    }
   });
 });
