@@ -71,7 +71,7 @@ export const daiLyConfig: LandingPageConfig = {
   products: {
     title: 'Danh mục sản phẩm cho đối tác',
     note: 'Danh mục đầy đủ và bảng giá đối tác được cung cấp sau khi ký hợp đồng. Thông số/quy cách theo TDS đã xác nhận.',
-    items: getProducts(['CT-502', 'PU-600', 'FJ-368C', 'PU-888 PICK']),
+    items: getProducts(['CT-502', 'PU-600', 'PU-680', 'FJ-368C']),
   },
 
   policy: {

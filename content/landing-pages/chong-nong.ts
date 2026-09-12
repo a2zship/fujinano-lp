@@ -27,7 +27,8 @@ export const chongNongConfig: LandingPageConfig = {
     headline: 'Giải pháp chống nóng cho mái tôn, mái bê tông và tường ngoài trời',
     subheadline:
       'Dành cho nhà ở, nhà xưởng và công trình chịu nắng trực tiếp. Kỹ thuật Fujinano đánh giá bề mặt trước khi đề xuất hệ sản phẩm phù hợp.',
-    imageAlt: 'Thi công lớp phủ chống nóng mái tôn bằng sản phẩm Fujinano',
+    image: '/images/cong-trinh/mai-chong-nong.webp',
+    imageAlt: 'Mái tole nhà xưởng, nhà dân dụng và khu công nghiệp thi công sơn chống nóng Fujinano',
     primaryCTA: 'Nhận tư vấn kỹ thuật',
     secondaryCTA: 'Nhận báo giá',
     trustNote: 'Kỹ thuật liên hệ tư vấn theo hiện trạng công trình của anh/chị.',
@@ -61,26 +62,32 @@ export const chongNongConfig: LandingPageConfig = {
   benefits: {
     title: 'Vì sao chọn giải pháp chống nóng Fujinano',
     items: [
-      { title: 'Chọn sản phẩm theo bề mặt', description: 'Có lựa chọn cho mái tôn, mái bê tông và tường ngoài.', group: 'performance', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
-      { title: 'Bảo vệ bề mặt phơi nắng', description: 'Lớp phủ giúp bảo vệ bề mặt tiếp xúc nắng mưa.', group: 'technology', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
+      { title: 'Giảm nhiệt bề mặt mái tole', description: 'Dòng PU-600 Roofcool giảm nhiệt bề mặt mái tole.', group: 'performance', proof: 'Giảm nhiệt bề mặt trên 25°C (theo tài liệu Fujinano)' },
+      { title: 'Bảo vệ bề mặt phơi nắng', description: 'Màng co giãn, chống bám bụi, kháng kiềm & muối biển.', group: 'technology', proof: 'Sơn được trên kim loại, bê tông, gỗ (theo tài liệu Fujinano)' },
       { title: 'Hỗ trợ kỹ thuật thi công', description: 'Hướng dẫn xử lý bề mặt, số lớp và định mức.', group: 'support', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
       { title: 'Tư vấn theo công trình thực tế', description: 'Đề xuất bám theo hiện trạng và ngân sách.', group: 'application', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
     ],
   },
 
   evidence: {
-    title: 'Bằng chứng thực tế',
+    title: 'Ứng dụng & bằng chứng',
     blocks: [
-      { type: 'metric', title: 'Số liệu đo nhiệt trước / sau', pending: true, note: '[CẦN BỔ SUNG SỐ LIỆU ĐO NHIỆT ĐÃ XÁC NHẬN]' },
-      { type: 'before_after', title: 'Mái/tường trước & sau thi công', pending: true, note: '[CẦN BỔ SUNG HÌNH ẢNH THỰC TẾ]' },
+      {
+        type: 'image',
+        title: 'Ứng dụng trên mái công trình',
+        content: 'Mái tole nhà xưởng · nhà dân dụng · khu công nghiệp.',
+        image: '/images/cong-trinh/mai-chong-nong.webp',
+        imageAlt: 'Các công trình mái thi công sơn chống nóng Fujinano PU-600',
+      },
+      { type: 'metric', title: 'Số liệu đo nhiệt tại công trình cụ thể', pending: true, note: '[CẦN BỔ SUNG SỐ LIỆU ĐO NHIỆT THỰC TẾ TẠI CÔNG TRÌNH]' },
       { type: 'video', title: 'Video thi công thực tế', pending: true, note: '[CẦN BỔ SUNG VIDEO THẬT]' },
     ],
   },
 
   products: {
-    title: 'Sản phẩm liên quan',
-    note: 'Kỹ thuật xác nhận dòng phù hợp sau khảo sát. Thông số/quy cách hiển thị theo TDS đã xác nhận. [CẦN XÁC NHẬN mã dòng chống nóng chuyên dụng].',
-    items: getProducts(['FJ-368C']),
+    title: 'Sản phẩm phù hợp cho chống nóng',
+    note: 'Dòng chống nóng chuyên dụng của Fujinano. Thông số theo tài liệu chính thức; kỹ thuật tư vấn phương án theo bề mặt.',
+    items: getProducts(['PU-600']),
   },
 
   process: {
@@ -101,7 +108,7 @@ export const chongNongConfig: LandingPageConfig = {
     title: 'Câu hỏi thường gặp',
     items: [
       { q: 'Dùng được cho mái tôn và mái bê tông không?', a: 'Fujinano có lựa chọn cho cả mái tôn và mái bê tông. Kỹ thuật tư vấn dòng phù hợp sau khi đánh giá bề mặt.' },
-      { q: 'Có giảm được nhiệt độ không?', a: 'Mức cải thiện phụ thuộc bề mặt, hướng nắng, số lớp và điều kiện thực tế. Số liệu cụ thể sẽ cung cấp khi có kết quả đo đã xác nhận — [CẦN XÁC NHẬN SỐ LIỆU].' },
+      { q: 'Có giảm được nhiệt độ không?', a: 'Theo tài liệu Fujinano, dòng PU-600 Roofcool giảm nhiệt bề mặt mái tole trên 25°C. Mức cải thiện thực tế còn phụ thuộc bề mặt, hướng nắng, số lớp và điều kiện công trình; kỹ thuật sẽ tư vấn cụ thể sau khảo sát.' },
       { q: 'Có cần xử lý lớp cũ / gỉ sét không?', a: 'Thông thường cần vệ sinh và xử lý bề mặt (gỉ, rêu mốc, lớp cũ) để lớp phủ mới bám tốt.' },
       { q: 'Thi công mất bao lâu?', a: 'Tùy diện tích, số lớp và thời tiết. Kỹ thuật ước tính cụ thể sau khảo sát.' },
       { q: 'Fujinano có hỗ trợ kỹ thuật không?', a: 'Có. Bộ phận kỹ thuật hỗ trợ xử lý bề mặt, chọn sản phẩm, số lớp và định mức.' },

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
+import { Logo } from '@/components/ui/Logo';
 import { SiteFooter } from '@/components/landing/SiteFooter';
 import { landingPages } from '@/content/landing-pages';
 import { brand } from '@/content/brand';
@@ -30,8 +31,9 @@ export default function Home() {
 
       <header className="bg-brand text-brand-fg">
         <Container className="py-14 md:py-20">
-          <p className="mb-3 inline-block rounded-sm bg-white/10 px-3 py-1 text-sm font-semibold text-accent">
-            {brand.name} — {brand.tagline}
+          <Logo variant="dark" className="mb-6" />
+          <p className="mb-3 inline-block rounded-sm bg-white/10 px-3 py-1 text-sm font-semibold text-gold">
+            {brand.slogan} — {brand.sloganSub}
           </p>
           <h1 className="max-w-2xl text-3xl font-bold leading-tight md:text-[40px]">
             Chọn giải pháp theo nhu cầu công trình của anh/chị
@@ -83,7 +85,7 @@ export default function Home() {
                   href={c.href}
                   className="flex flex-col rounded bg-white/5 p-4 ring-1 ring-white/15 transition-colors hover:bg-white/10"
                 >
-                  <span className="font-semibold text-accent">{c.label} →</span>
+                  <span className="font-semibold text-gold">{c.label} →</span>
                   <span className="mt-1 text-sm text-brand-fg/75">{c.desc}</span>
                 </Link>
               ))}

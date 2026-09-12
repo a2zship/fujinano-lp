@@ -82,6 +82,8 @@ export interface ProductCard {
   usage?: string;
   surfaces?: string[];
   packaging?: string;
+  /** Công dụng chính (theo tài liệu thương hiệu chính thức). */
+  features?: string[];
   tdsUrl?: string;
   /** [CẦN XÁC NHẬN] chỉ hiển thị khi có ảnh thật */
   image?: string;
@@ -116,6 +118,9 @@ export interface EvidenceBlock {
   title?: string;
   /** Nội dung tuỳ type. Nếu chưa có dữ liệu thật -> để pending = true. */
   content?: unknown;
+  /** Ảnh thật (đường dẫn public). Khi có -> render ảnh thay vì placeholder. */
+  image?: string;
+  imageAlt?: string;
   /** true = đang chờ bằng chứng thật; render placeholder nội bộ. */
   pending?: boolean;
   note?: string;

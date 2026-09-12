@@ -103,7 +103,7 @@ export const chongThamConfig: LandingPageConfig = {
   products: {
     title: 'Sản phẩm phù hợp cho nhu cầu chống thấm',
     note: 'Kỹ thuật sẽ chốt sản phẩm cuối cùng sau khi đánh giá bề mặt. Thông số quy cách hiển thị theo TDS đã xác nhận.',
-    items: getProducts(['CT-502', 'FJ-108N', 'FJ-118M']),
+    items: getProducts(['CT-502', 'PU-380', 'PU-700']),
   },
 
   process: {

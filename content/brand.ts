@@ -6,7 +6,16 @@
 
 export const brand = {
   name: 'Fujinano',
-  tagline: 'Sơn & Giải pháp chống thấm',
+  tagline: 'Sơn & Chống thấm — Công nghệ Nhật Bản',
+  jp: '日本の技術',
+  slogan: 'Nâng tầm không gian sống',
+  sloganSub: 'Chất lượng Nhật Bản cho ngôi nhà Việt',
+
+  website: 'www.fujinano.com',
+  websiteUrl: 'https://www.fujinano.com',
+
+  /** Địa chỉ giao hàng đã xác nhận từ bảng giá chính thức (Tổng kho Cần Thơ). */
+  warehouse: 'Tổng kho Cần Thơ — 77 QL1A, Tổ 61, P. Hưng Phú, TP. Cần Thơ',
 
   /** [CẦN XÁC NHẬN] — chưa có số hotline/Zalo chính thức của Fujinano trong tài liệu. */
   hotline: process.env.NEXT_PUBLIC_HOTLINE || '[CẦN XÁC NHẬN HOTLINE]',
@@ -16,6 +25,14 @@ export const brand = {
 
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3151',
 };
+
+/** 4 trụ giá trị Fujinano (theo vật liệu thương hiệu chính thức). */
+export const brandPillars = [
+  { title: 'Công nghệ Nhật Bản', desc: '日本の技術 — tiêu chuẩn kỹ thuật Nhật Bản.' },
+  { title: 'Độ bền cao', desc: 'Bền màu, bảo vệ bề mặt dài lâu.' },
+  { title: 'Màu sắc đa dạng', desc: 'Pha được nhiều màu theo nhu cầu.' },
+  { title: 'Thân thiện môi trường', desc: 'An toàn sức khỏe, hàm lượng VOC thấp.' },
+];
 
 /*
   CHÍNH SÁCH ĐẠI LÝ C1 — miền Nam 2026 (mục 22)

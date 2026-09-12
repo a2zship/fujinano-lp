@@ -3,41 +3,42 @@
 @tailwind utilities;
 
 /*
-  FUJINANO DESIGN TOKENS
-  ----------------------
-  [CẦN XÁC NHẬN MÀU THƯƠNG HIỆU CHÍNH THỨC] — bảng màu dưới đây là đề xuất
-  cho ngành sơn & chống thấm (navy tin cậy + accent cam cho CTA). Khi Fujinano
-  cung cấp brand guideline chính thức, chỉ cần đổi các biến trong :root này,
-  toàn bộ hệ thống sẽ tự cập nhật.
+  FUJINANO DESIGN TOKENS — bộ nhận diện lấy từ vật liệu thương hiệu chính thức
+  (logo mặt trời đỏ + núi Phú Sĩ, 日本の技術). Màu chủ đạo: NAVY + ĐỎ + trắng,
+  điểm nhấn GOLD cho dòng cao cấp (PU-180, Nano Ceramic). Đổi biến ở :root này
+  là toàn hệ thống cập nhật theo.
 */
 :root {
-  /* Brand */
-  --brand: 214 74% 22%;          /* #0f2f5e navy — trust, headers, footer */
+  /* Brand — navy Fujinano (headers, footer, nền thương hiệu) */
+  --brand: 219 76% 22%;          /* #0e2c63 navy */
   --brand-fg: 0 0% 100%;
-  --brand-soft: 214 60% 96%;     /* nền nhạt cho section thương hiệu */
+  --brand-soft: 219 60% 96%;
 
-  /* Accent (CTA) */
-  --accent: 18 89% 54%;          /* #f26522 cam — nút hành động chính */
+  /* Accent (CTA) — đỏ mặt trời Fujinano */
+  --accent: 3 78% 48%;           /* #da251d đỏ — nút hành động chính */
   --accent-fg: 0 0% 100%;
-  --accent-hover: 18 89% 47%;
+  --accent-hover: 3 78% 41%;
+
+  /* Gold — điểm nhấn dòng cao cấp (badge, premium) */
+  --gold: 41 55% 52%;            /* #c9a24b */
 
   /* Support (nước / kỹ thuật) */
-  --support: 208 79% 51%;        /* #1e88e5 xanh nước */
+  --support: 208 79% 45%;        /* #1670c9 xanh nước */
 
   /* Surfaces */
   --surface: 0 0% 100%;
-  --surface-alt: 210 33% 97%;    /* nền section xen kẽ */
-  --surface-sunken: 214 30% 94%;
+  --surface-alt: 216 33% 97%;    /* nền section xen kẽ */
+  --surface-sunken: 216 30% 93%;
 
   /* Text */
-  --text: 216 33% 17%;           /* #1c2733 */
-  --muted: 215 16% 42%;          /* phụ đề, meta */
-  --border: 214 20% 88%;
+  --text: 218 38% 16%;           /* #19233a */
+  --muted: 216 16% 42%;          /* phụ đề, meta */
+  --border: 216 22% 88%;
 
   /* Semantic */
-  --success: 152 56% 36%;
-  --warning: 38 92% 50%;
-  --danger: 0 72% 51%;
+  --success: 152 56% 34%;
+  --warning: 38 92% 48%;
+  --danger: 3 78% 48%;
 
   /* Radius (mục 28) */
   --radius-sm: 6px;
@@ -58,10 +59,9 @@ html {
 }
 
 :root {
-  /* Font hệ thống (an toàn offline). Khi load webfont thương hiệu,
-     đổi giá trị này là toàn site cập nhật. */
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+  /* Be Vietnam Pro (hỗ trợ tiếng Việt đầy đủ) + fallback hệ thống. */
+  --font-sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 body {

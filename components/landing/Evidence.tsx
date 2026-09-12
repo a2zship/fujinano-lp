@@ -17,26 +17,53 @@ export function Evidence({ config }: { config: LandingPageConfig }) {
         description="Fujinano chỉ công bố bằng chứng đã được xác minh. Các hạng mục dưới đây sẽ cập nhật khi có dữ liệu thực tế."
       />
       <div className="grid gap-4 md:grid-cols-3">
-        {ev.blocks.map((b, i) => (
-          <div
-            key={i}
-            className="flex min-h-[180px] flex-col rounded border border-dashed border-border bg-surface-alt p-5"
-          >
-            <span className="text-xs font-semibold uppercase tracking-wide text-support">
-              {labelForType(b.type)}
-            </span>
-            <h3 className="mt-1 font-semibold">{b.title}</h3>
-            {b.pending ? (
-              <p className="mt-auto pt-4 text-sm italic text-muted/70">
-                {b.note ?? '[CẦN BỔ SUNG BẰNG CHỨNG]'}
-              </p>
-            ) : (
-              <div className="mt-auto pt-4 text-sm text-muted">
-                {String(b.content ?? '')}
-              </div>
-            )}
-          </div>
-        ))}
+        {ev.blocks.map((b, i) => {
+          // Có ảnh thật -> render ảnh (không viền đứt).
+          if (b.image && !b.pending) {
+            return (
+              <figure key={i} className="overflow-hidden rounded-lg bg-surface shadow-flat">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={b.image}
+                  alt={b.imageAlt ?? b.title ?? 'Công trình Fujinano'}
+                  className="aspect-[4/3] w-full object-cover"
+                  loading="lazy"
+                />
+                {(b.title || Boolean(b.content)) && (
+                  <figcaption className="p-3 text-sm">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-support">
+                      {labelForType(b.type)}
+                    </span>
+                    <span className="mt-0.5 block font-medium">{b.title}</span>
+                    {b.content ? (
+                      <span className="text-muted">{String(b.content)}</span>
+                    ) : null}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          }
+          return (
+            <div
+              key={i}
+              className="flex min-h-[180px] flex-col rounded border border-dashed border-border bg-surface-alt p-5"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wide text-support">
+                {labelForType(b.type)}
+              </span>
+              <h3 className="mt-1 font-semibold">{b.title}</h3>
+              {b.pending ? (
+                <p className="mt-auto pt-4 text-sm italic text-muted/70">
+                  {b.note ?? '[CẦN BỔ SUNG BẰNG CHỨNG]'}
+                </p>
+              ) : (
+                <div className="mt-auto pt-4 text-sm text-muted">
+                  {String(b.content ?? '')}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </Section>
   );

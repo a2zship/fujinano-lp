@@ -29,6 +29,7 @@ export const nanoCeramicConfig: LandingPageConfig = {
     headline: 'Lớp phủ Nano Ceramic Fujinano cho nhu cầu bảo vệ và hoàn thiện bề mặt',
     subheadline:
       'Dành cho khách hàng quan tâm dòng phủ Nano Ceramic (FJ-368C). Kỹ thuật Fujinano tư vấn phạm vi ứng dụng và cách thi công phù hợp với bề mặt của anh/chị.',
+    image: '/images/products/nano-ceramic.webp',
     imageAlt: 'Sản phẩm lớp phủ Nano Ceramic Fujinano FJ-368C',
     primaryCTA: 'Nhận tư vấn kỹ thuật',
     secondaryCTA: 'Nhận báo giá',
@@ -61,10 +62,10 @@ export const nanoCeramicConfig: LandingPageConfig = {
   benefits: {
     title: 'Về dòng Nano Ceramic Fujinano',
     items: [
-      { title: 'Dòng phủ Nano Ceramic', description: 'Sản phẩm FJ-368C trong danh mục Fujinano.', group: 'technology', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
-      { title: 'Tư vấn phạm vi ứng dụng', description: 'Kỹ thuật xác định bề mặt phù hợp trước khi đề xuất.', group: 'application', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
-      { title: 'Hỗ trợ kỹ thuật thi công', description: 'Hướng dẫn xử lý bề mặt, số lớp và định mức.', group: 'support', proof: '[CẦN BỔ SUNG BẰNG CHỨNG]' },
-      { title: 'Công dụng & thông số cụ thể', description: 'Sẽ công bố theo TDS và hồ sơ đã xác nhận.', group: 'performance', proof: '[CẦN XÁC NHẬN THÔNG SỐ & CÔNG DỤNG]' },
+      { title: 'Bề mặt siêu bóng men kính', description: 'Sơn siêu bóng men kính nội & ngoại thất, sáng trong.', group: 'technology', proof: 'Theo tài liệu Fujinano' },
+      { title: 'Bảo vệ toàn diện', description: 'Chống thấm, chống tia UV bền màu, chống bám bụi.', group: 'performance', proof: 'Theo tài liệu Fujinano' },
+      { title: 'Lau chùi dễ dàng', description: 'Bề mặt dễ vệ sinh, sạch sẽ như mới.', group: 'application', proof: 'Theo tài liệu Fujinano' },
+      { title: 'Bảo hành dài hạn', description: 'Dòng Nano Ceramic bảo hành theo chính sách Fujinano.', group: 'support', proof: 'Bảo hành 20 năm (theo tài liệu Fujinano)' },
     ],
   },
 
@@ -100,8 +101,8 @@ export const nanoCeramicConfig: LandingPageConfig = {
   faq: {
     title: 'Câu hỏi thường gặp',
     items: [
-      { q: 'Nano Ceramic Fujinano dùng cho bề mặt nào?', a: 'Kỹ thuật sẽ xác định bề mặt phù hợp sau khi đánh giá nhu cầu. Phạm vi ứng dụng cụ thể công bố theo hồ sơ đã xác nhận — [CẦN XÁC NHẬN].' },
-      { q: 'Công dụng chính của sản phẩm là gì?', a: 'Công dụng và thông số cụ thể sẽ cung cấp theo TDS đã xác nhận — [CẦN XÁC NHẬN THÔNG SỐ]. Fujinano không công bố công dụng chưa được kiểm chứng.' },
+      { q: 'Nano Ceramic Fujinano dùng cho bề mặt nào?', a: 'Sơn siêu bóng men kính dùng cho tường nội thất và ngoại thất. Kỹ thuật sẽ tư vấn phương án phù hợp sau khi đánh giá bề mặt.' },
+      { q: 'Công dụng chính của sản phẩm là gì?', a: 'Theo tài liệu Fujinano: bề mặt siêu bóng men kính, chống thấm, chống tia UV bền màu, chống bám bụi và lau chùi dễ dàng. Quy cách Thùng 15 lít (150–180 m²/lớp) / Lon 5 lít.' },
       { q: 'Thi công như thế nào?', a: 'Cần xử lý bề mặt trước khi phủ; số lớp và định mức theo hướng dẫn kỹ thuật của sản phẩm.' },
       { q: 'Fujinano có hỗ trợ kỹ thuật không?', a: 'Có. Bộ phận kỹ thuật hỗ trợ đánh giá bề mặt, chọn phương án và hướng dẫn thi công.' },
       { q: 'Mua ở đâu và có giao hàng không?', a: 'Anh/chị để lại thông tin, Fujinano tư vấn kênh mua và giao hàng phù hợp khu vực — [CẦN XÁC NHẬN CHÍNH SÁCH GIAO HÀNG].' },

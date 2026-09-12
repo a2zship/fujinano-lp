@@ -19,6 +19,7 @@ const config: Config = {
           fg: 'hsl(var(--accent-fg))',
           hover: 'hsl(var(--accent-hover))',
         },
+        gold: 'hsl(var(--gold))',
         support: 'hsl(var(--support))',
         surface: {
           DEFAULT: 'hsl(var(--surface))',

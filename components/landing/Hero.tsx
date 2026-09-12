@@ -1,6 +1,7 @@
 import { type LandingPageConfig } from '@/types';
 import { Container } from '@/components/ui/Container';
 import { CtaButton } from '@/components/ui/CtaButton';
+import { Logo } from '@/components/ui/Logo';
 
 export function Hero({ config }: { config: LandingPageConfig }) {
   const { hero } = config;
@@ -19,8 +20,9 @@ export function Hero({ config }: { config: LandingPageConfig }) {
       <Container className="relative py-12 md:py-20">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
           <div>
+            <Logo variant="dark" className="mb-6" />
             {hero.eyebrow && (
-              <p className="mb-3 inline-block rounded-sm bg-white/10 px-3 py-1 text-sm font-semibold text-accent">
+              <p className="mb-3 inline-block rounded-sm bg-white/10 px-3 py-1 text-sm font-semibold text-gold">
                 {hero.eyebrow}
               </p>
             )}

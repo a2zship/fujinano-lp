@@ -26,7 +26,8 @@ export const sonSanConfig: LandingPageConfig = {
     headline: 'Giải pháp sơn phủ sàn cho nhà xưởng, kho và khu vực chịu tải',
     subheadline:
       'Dành cho sàn bê tông cần bề mặt sạch, dễ vệ sinh và chịu đi lại. Kỹ thuật Fujinano đánh giá mặt sàn trước khi đề xuất hệ sơn phù hợp.',
-    imageAlt: 'Thi công sơn phủ sàn nhà xưởng bằng sản phẩm Fujinano',
+    image: '/images/cong-trinh/san-cong-nghiep.webp',
+    imageAlt: 'Sàn nhà xưởng phủ sơn PU công nghiệp Fujinano',
     primaryCTA: 'Nhận tư vấn kỹ thuật',
     secondaryCTA: 'Nhận báo giá',
     trustNote: 'Kỹ thuật liên hệ tư vấn theo hiện trạng mặt sàn của anh/chị.',
@@ -68,18 +69,30 @@ export const sonSanConfig: LandingPageConfig = {
   },
 
   evidence: {
-    title: 'Bằng chứng thực tế',
+    title: 'Ứng dụng & bằng chứng',
     blocks: [
-      { type: 'before_after', title: 'Mặt sàn trước / sau thi công', pending: true, note: '[CẦN BỔ SUNG HÌNH ẢNH THỰC TẾ]' },
-      { type: 'image', title: 'Ảnh công trình sàn đã thi công', pending: true, note: '[CẦN BỔ SUNG ẢNH CÔNG TRÌNH THẬT]' },
-      { type: 'metric', title: 'Kết quả kiểm tra độ bám / độ bền', pending: true, note: '[CẦN BỔ SUNG SỐ LIỆU TEST ĐÃ XÁC NHẬN]' },
+      {
+        type: 'image',
+        title: 'Sàn bê tông phủ PU công nghiệp',
+        content: 'Bề mặt bóng, chịu tải, dễ vệ sinh.',
+        image: '/images/cong-trinh/san-cong-nghiep.webp',
+        imageAlt: 'Sàn nhà xưởng phủ sơn PU-2K Fujinano',
+      },
+      {
+        type: 'image',
+        title: 'Bảo vệ kết cấu kim loại',
+        content: 'Sơn lót epoxy chống gỉ + phủ PU cho thép, nhà tiền chế.',
+        image: '/images/cong-trinh/kim-loai.webp',
+        imageAlt: 'Kết cấu thép sơn hệ epoxy/PU Fujinano',
+      },
+      { type: 'metric', title: 'Kết quả kiểm tra độ bám / chịu tải tại công trình', pending: true, note: '[CẦN BỔ SUNG SỐ LIỆU TEST ĐÃ XÁC NHẬN]' },
     ],
   },
 
   products: {
-    title: 'Sản phẩm phù hợp cho sơn sàn',
-    note: 'Kỹ thuật chốt hệ sơn cuối cùng sau khi đánh giá mặt sàn. Thông số/quy cách hiển thị theo TDS đã xác nhận.',
-    items: getProducts(['PU-600', 'PU-700', 'PU-380']),
+    title: 'Sản phẩm phù hợp cho sơn sàn & kim loại',
+    note: 'Kỹ thuật chốt hệ sơn cuối cùng sau khi đánh giá mặt sàn. Thông số/quy cách theo tài liệu chính thức.',
+    items: getProducts(['PU-2K SNX', 'PU-700', 'EP-2K CG']),
   },
 
   process: {

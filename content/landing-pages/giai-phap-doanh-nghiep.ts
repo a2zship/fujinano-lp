@@ -69,18 +69,30 @@ export const doanhNghiepConfig: LandingPageConfig = {
   },
 
   evidence: {
-    title: 'Hồ sơ & bằng chứng kỹ thuật',
+    title: 'Hồ sơ & ứng dụng kỹ thuật',
     blocks: [
-      { type: 'metric', title: 'Tài liệu kỹ thuật (TDS) theo sản phẩm', pending: true, note: '[CẦN BỔ SUNG TDS ĐÃ XÁC NHẬN]' },
-      { type: 'image', title: 'Hồ sơ dự án đã triển khai', pending: true, note: '[CẦN BỔ SUNG DỰ ÁN ĐÃ ĐƯỢC DUYỆT]' },
-      { type: 'metric', title: 'Chứng nhận / kết quả thử nghiệm', pending: true, note: '[CẦN BỔ SUNG CHỨNG NHẬN ĐÃ XÁC NHẬN]' },
+      {
+        type: 'image',
+        title: 'Sàn công nghiệp',
+        content: 'Hệ sơn phủ sàn bê tông PU cho nhà xưởng.',
+        image: '/images/cong-trinh/san-cong-nghiep.webp',
+        imageAlt: 'Sàn nhà xưởng phủ sơn PU Fujinano',
+      },
+      {
+        type: 'image',
+        title: 'Kết cấu kim loại',
+        content: 'Hệ epoxy chống gỉ + phủ PU cho thép, nhà tiền chế.',
+        image: '/images/cong-trinh/kim-loai.webp',
+        imageAlt: 'Kết cấu thép sơn hệ Fujinano',
+      },
+      { type: 'metric', title: 'Hồ sơ dự án & chứng nhận đã được duyệt', pending: true, note: '[CẦN BỔ SUNG DỰ ÁN & CHỨNG NHẬN ĐÃ XÁC NHẬN]' },
     ],
   },
 
   products: {
     title: 'Danh mục giải pháp theo hạng mục',
-    note: 'Hệ sản phẩm cuối cùng xác nhận theo yêu cầu kỹ thuật của dự án. Thông số/quy cách theo TDS đã xác nhận.',
-    items: getProducts(['CT-502', 'FJ-368C', 'PU-600', 'PU-888 PICK']),
+    note: 'Hệ sản phẩm cuối cùng xác nhận theo yêu cầu kỹ thuật của dự án. Thông số/quy cách theo tài liệu chính thức.',
+    items: getProducts(['CT-502', 'PU-700', 'PU-2K SNX', 'PU-600']),
   },
 
   process: {

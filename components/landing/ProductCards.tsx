@@ -15,11 +15,11 @@ export function ProductCards({ config }: { config: LandingPageConfig }) {
             key={p.code ?? p.name}
             className="flex flex-col overflow-hidden rounded-lg bg-surface shadow-card"
           >
-            {/* Ảnh sản phẩm: placeholder nếu chưa có (mục 18) */}
-            <div className="flex aspect-[1/1] items-center justify-center border-b border-border bg-surface-sunken text-center text-xs text-muted/70">
+            {/* Ảnh bao bì thật (object-contain trên nền trắng); placeholder nếu chưa có */}
+            <div className="flex aspect-[4/3] items-center justify-center border-b border-border bg-white p-3 text-center text-xs text-muted/70">
               {p.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={p.image} alt={p.name} className="h-full w-full object-cover" loading="lazy" />
+                <img src={p.image} alt={p.name} className="h-full w-full object-contain" loading="lazy" />
               ) : (
                 <span className="px-4">[CẦN BỔ SUNG HÌNH BAO BÌ THẬT]</span>
               )}
@@ -47,6 +47,22 @@ export function ProductCards({ config }: { config: LandingPageConfig }) {
                   </div>
                 )}
               </dl>
+
+              {p.features && p.features.length > 0 && (
+                <ul className="mt-3 space-y-1 text-sm text-muted">
+                  {p.features.map((f) => {
+                    const pending = f.trim().startsWith('[CẦN');
+                    return (
+                      <li key={f} className="flex gap-2">
+                        <span className={pending ? 'text-muted/50' : 'text-accent'}>
+                          {pending ? '•' : '✓'}
+                        </span>
+                        <span className={pending ? 'italic text-muted/60' : ''}>{f}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
 
               <div className="mt-4 flex flex-1 flex-col justify-end gap-2">
                 {p.tdsUrl && (

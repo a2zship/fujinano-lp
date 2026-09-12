@@ -53,13 +53,14 @@ describe('landing registry', () => {
   });
 
   it('KHÔNG trang nào chứa claim cấm (số 1, 100% chống thấm, giảm X độ...)', () => {
+    // Các claim TỰ BỊA bị cấm. ("giảm nhiệt trên 25°C" KHÔNG cấm vì là claim
+    //  chính thức của Fujinano, luôn kèm dẫn nguồn "theo tài liệu Fujinano".)
     const banned = [
       'số 1',
       'tốt nhất thị trường',
       '100% chống thấm',
       'bền vĩnh viễn',
       'độc quyền',
-      'giảm nhiệt',
     ];
     for (const slug of getAllLandingSlugs()) {
       const raw = JSON.stringify(getLandingPage(slug)).toLowerCase();

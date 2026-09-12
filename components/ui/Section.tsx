@@ -41,7 +41,7 @@ export function SectionHeading({
       {eyebrow && (
         <p
           className={`mb-2 text-sm font-semibold uppercase tracking-wide ${
-            onBrand ? 'text-accent' : 'text-support'
+            onBrand ? 'text-gold' : 'text-support'
           }`}
         >
           {eyebrow}
