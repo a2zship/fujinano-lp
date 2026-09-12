@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { getLandingPage, getAllLandingSlugs } from '@/content/landing-pages';
 import { daiLyConfig } from '@/content/landing-pages/dai-ly';
+import { fujinanoProConfig } from '@/content/landing-pages/fujinano-pro';
+import { doanhNghiepConfig } from '@/content/landing-pages/giai-phap-doanh-nghiep';
 
 /*
   Kiểm tra dynamic page rendering ở mức dữ liệu (mục 29):
@@ -80,4 +82,30 @@ describe('trang đại lý (/dai-ly)', () => {
     const raw = JSON.stringify(daiLyConfig);
     expect(raw).not.toMatch(/20\s*%|30\s*%/);
   });
+});
+
+describe('trang đối tác đứng riêng (pro, doanh nghiệp)', () => {
+  const standalone = [
+    { name: 'fujinano-pro', cfg: fujinanoProConfig, leadType: 'worker' },
+    { name: 'giai-phap-doanh-nghiep', cfg: doanhNghiepConfig, leadType: 'business' },
+  ];
+
+  for (const { name, cfg, leadType } of standalone) {
+    it(`${name}: đủ khối tối thiểu + leadType đúng`, () => {
+      expect(cfg.slug).toBe(name);
+      expect(cfg.form.leadType).toBe(leadType);
+      expect(cfg.hero.headline.length).toBeGreaterThan(10);
+      expect(cfg.painPoints.items.length).toBeGreaterThanOrEqual(3);
+      expect(cfg.finalCta.primaryCTA).toBeTruthy();
+      expect(cfg.form.needOptions?.length).toBeGreaterThan(0);
+      expect(cfg.seo.description.length).toBeGreaterThan(30);
+    });
+
+    it(`${name}: không chứa claim cấm`, () => {
+      const raw = JSON.stringify(cfg).toLowerCase();
+      for (const b of ['số 1', 'tốt nhất thị trường', 'bền vĩnh viễn', 'độc quyền']) {
+        expect(raw, `${name} chứa "${b}"`).not.toContain(b);
+      }
+    });
+  }
 });

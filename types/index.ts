@@ -212,6 +212,8 @@ export interface LandingPageConfig {
     leadType: CustomerType | string;
     needOptions?: string[];
     projectTypeOptions?: string[];
+    /** Tuỳ biến nhãn trường "Nhu cầu" bước 1 (vd trang tuyển thợ: "Nghề chính"). */
+    needLabel?: string;
     /** Tuỳ biến nhãn bước 2 (mặc định theo công trình xây dựng). */
     projectTypeLabel?: string;
     areaLabel?: string;

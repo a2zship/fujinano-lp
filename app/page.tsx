@@ -67,19 +67,27 @@ export default function Home() {
             })}
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-lg bg-brand p-6 text-brand-fg sm:flex-row">
-            <div>
-              <h2 className="text-xl font-semibold">Bạn muốn kinh doanh sản phẩm Fujinano?</h2>
-              <p className="mt-1 text-sm text-brand-fg/80">
-                Chính sách chiết khấu theo nhóm, hỗ trợ marketing và đào tạo kỹ thuật cho đối tác.
-              </p>
+          <div className="mt-10 rounded-lg bg-brand p-6 text-brand-fg md:p-8">
+            <h2 className="text-xl font-semibold">Hợp tác cùng Fujinano</h2>
+            <p className="mt-1 text-sm text-brand-fg/80">
+              Dành cho đối tác phân phối, thợ thi công và doanh nghiệp / dự án.
+            </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {[
+                { href: '/dai-ly', label: 'Trở thành đại lý', desc: 'Chính sách chiết khấu, hỗ trợ marketing.' },
+                { href: '/fujinano-pro', label: 'Fujinano Pro (thợ)', desc: 'Kết nối công trình, đào tạo kỹ thuật.' },
+                { href: '/giai-phap-doanh-nghiep', label: 'Giải pháp doanh nghiệp', desc: 'Tư vấn dự án, mẫu thử, báo giá khối lượng.' },
+              ].map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="flex flex-col rounded bg-white/5 p-4 ring-1 ring-white/15 transition-colors hover:bg-white/10"
+                >
+                  <span className="font-semibold text-accent">{c.label} →</span>
+                  <span className="mt-1 text-sm text-brand-fg/75">{c.desc}</span>
+                </Link>
+              ))}
             </div>
-            <Link
-              href="/dai-ly"
-              className="inline-flex min-h-[48px] flex-none items-center justify-center rounded bg-accent px-6 py-3 font-semibold text-accent-fg transition-colors hover:bg-accent-hover"
-            >
-              Trở thành đại lý
-            </Link>
           </div>
         </Container>
       </section>

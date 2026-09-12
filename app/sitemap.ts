@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const others = [
     { url: `${brand.siteUrl}/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 1 },
     { url: `${brand.siteUrl}/dai-ly`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${brand.siteUrl}/fujinano-pro`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${brand.siteUrl}/giai-phap-doanh-nghiep`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
   ];
 
   return [...others, ...solutions];

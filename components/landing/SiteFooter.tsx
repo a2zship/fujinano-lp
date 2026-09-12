@@ -29,9 +29,19 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="pt-1">
                 <Link href="/dai-ly" className="font-semibold text-brand-fg hover:text-accent">
                   Trở thành đại lý
+                </Link>
+              </li>
+              <li>
+                <Link href="/fujinano-pro" className="font-semibold text-brand-fg hover:text-accent">
+                  Fujinano Pro (thợ)
+                </Link>
+              </li>
+              <li>
+                <Link href="/giai-phap-doanh-nghiep" className="font-semibold text-brand-fg hover:text-accent">
+                  Giải pháp doanh nghiệp
                 </Link>
               </li>
             </ul>

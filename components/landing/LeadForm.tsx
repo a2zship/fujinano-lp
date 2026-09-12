@@ -151,13 +151,13 @@ export function LeadForm({ config }: { config: LandingPageConfig }) {
                       />
                     </Field>
 
-                    <Field label="Nhu cầu" error={errors.need} required>
+                    <Field label={form.needLabel ?? 'Nhu cầu'} error={errors.need} required>
                       <select
                         className="fjn-input"
                         value={data.need ?? ''}
                         onChange={(e) => update({ need: e.target.value })}
                       >
-                        <option value="">— Chọn nhu cầu —</option>
+                        <option value="">— Chọn —</option>
                         {(form.needOptions ?? []).map((n) => (
                           <option key={n} value={n}>
                             {n}
